@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shakespeare Writing Pad</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="book">
+      <div class="page left">
+        <img class="plate" src="assets/plate.jpg" alt="" onerror="this.style.display='none'" />
+      </div>
+      <div class="page right">
+        <header>
+          <h1>Shakespeare Writing Pad</h1>
+          <p class="tagline">Let the Bard's tongue guide thy pen.</p>
+          <p class="hint">
+            &mdash; <kbd>&uarr;</kbd>/<kbd>&darr;</kbd> or <kbd>Tab</kbd>/<kbd>Shift+Tab</kbd> to navigate,
+            <kbd>Enter</kbd> to accept, <kbd>Esc</kbd> to dismiss.
+          </p>
+        </header>
+
+        <div class="editor">
+          <div id="mirror" class="mirror" aria-hidden="true"></div>
+          <textarea
+            id="pad"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            placeholder="What light through yonder window breaks&hellip;"
+          ></textarea>
+          <ul id="suggestions" class="suggestions" hidden></ul>
+        </div>
+
+        <footer class="status">
+          <span id="status">Loading vocabulary&hellip;</span>
+          <span class="attribution">
+            Trie autocomplete prototyped in Python &mdash;
+            <a
+              href="https://github.com/zuccamia/cs6120-coursework/blob/main/assignment1.ipynb"
+              target="_blank"
+              rel="noopener"
+              >notebook</a
+            >.
+            <br />
+            Backdrop by
+            <a
+              href="https://unsplash.com/@roberto_sorin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+              target="_blank"
+              rel="noopener"
+              >Roberto Sorin</a
+            >
+            &amp;
+            <a
+              href="https://unsplash.com/@nypl?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+              target="_blank"
+              rel="noopener"
+              >The New York Public Library</a
+            >
+            on
+            <a
+              href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+              target="_blank"
+              rel="noopener"
+              >Unsplash</a
+            >.
+          </span>
+        </footer>
+      </div>
+
+      <div class="spine"></div>
+      <div class="crease"></div>
+      <div class="smudge"></div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
